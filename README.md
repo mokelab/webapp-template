@@ -12,11 +12,18 @@ Template for Web application. This template uses Ractive.js + Backbone.js(Router
 
 # How to add page 
 
-Add the following `<script>` to body.
+In this section, we introduce the way to add `MyPage` to your app. 
 
-    <script id="myPageTemplate" type="text/ractive">
+Add HTML to `index.html`. In ractive.js, each page should be placed in `<script id="xxxx" type="text/ractive">`. 
+
+    <section id="container"></section>
+      <script id="topTemplate" type="text/ractive">
         <h1>Top page</h1>
-    </script>
+      </script>
+      
+      <script id="myPageTemplate" type="text/ractive">
+          <h1>My page</h1>
+      </script>
 
 Copy `TopPage.ts`, rename class, and update the argument of `new Ractive` as follows
 
