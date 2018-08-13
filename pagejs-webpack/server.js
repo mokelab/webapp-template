@@ -19,7 +19,10 @@ require('http').createServer(function (request, response) {
         } else if (pathSegments[1] == 'js') {
             file.serve(request, response);
             return;
-        }
+        } else if (pathSegments[1] == 'pages') {
+            file.serve(request, response);
+            return;
+        }        
     }
 
     fs.readFile('./dist/index.html', "binary", function(err, file){

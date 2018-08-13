@@ -2,7 +2,7 @@ interface HTTPClient {
     send(method : Method, url : string, header : any, body : any) : Promise<HTTPResponse>;
 }
 
-enum Method {
+const enum Method {
     GET = "GET",
     POST = "POST",
     PUT = "PUT",

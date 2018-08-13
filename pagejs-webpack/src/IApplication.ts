@@ -3,4 +3,6 @@
 
 interface IApplication {
     start(router: IRouter, services: IServices): void;
+
+    fetchTemplate(name: string): Promise<string>;
 }

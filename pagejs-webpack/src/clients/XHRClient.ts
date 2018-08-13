@@ -1,6 +1,6 @@
 /// <reference path="./HTTPClient.ts"/>
 
-class XHRClient implements HTTPClient {
+export default class XHRClient implements HTTPClient {
     private respType : XMLHttpRequestResponseType;
 
     constructor(respType : XMLHttpRequestResponseType) {
