@@ -1,0 +1,8 @@
+FROM nginx:alpine
+
+RUN apk add --no-cache ca-certificates
+COPY start_server.sh /opt/
+COPY default.conf /etc/nginx/conf.d
+COPY dist /opt/web/
+
+ENTRYPOINT ["sh", "/opt/start_server.sh"]
