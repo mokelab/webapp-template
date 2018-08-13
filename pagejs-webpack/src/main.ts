@@ -1,7 +1,9 @@
 /// <reference path="./page.d.ts"/>
 
-page('/', () => {
-    console.log('root');
-});
+import Application from './Application';
+import Router from './Router';
 
-page();
+const app = new Application();
+const router = new Router(app);
+app.start(router);
+
