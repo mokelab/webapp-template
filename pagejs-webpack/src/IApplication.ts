@@ -1,5 +1,6 @@
 /// <reference path="./IRouter.ts" />
+/// <reference path="./services/IServices.ts" />
 
 interface IApplication {
-    start(router: IRouter): void;
+    start(router: IRouter, services: IServices): void;
 }
