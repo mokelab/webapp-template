@@ -17,11 +17,11 @@ export default class Router implements IRouter {
     }
 
     navigate(path: string): void {
-        throw new Error("Method not implemented.");
+        page(path);
     }   
 
     redirect(path: string): void {
-        throw new Error("Method not implemented.");
+        page.redirect(path);
     }
 
     private showPage(next: IPage) {
