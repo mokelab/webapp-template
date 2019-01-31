@@ -7,4 +7,8 @@ interface IApplication {
     start(router: IRouter): void;
 
     fetchTemplate(name: string): Promise<string>;
+
+    navigate(path: string): void;
+
+    redirect(path: string): void;
 }

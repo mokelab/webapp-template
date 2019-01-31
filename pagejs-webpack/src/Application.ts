@@ -30,4 +30,12 @@ export default class Application implements IApplication {
             .then(isStatus200)
             .then(getBody);
     }
+
+    navigate(path: string): void {
+        this.router.navigate(path);
+    }
+
+    redirect(path: string): void {
+        this.router.redirect(path);
+    }
 }
