@@ -2,7 +2,9 @@
 /// <reference path="./services/IServices.ts" />
 
 interface IApplication {
-    start(router: IRouter, services: IServices): void;
+    services: IServices;
+
+    start(router: IRouter): void;
 
     fetchTemplate(name: string): Promise<string>;
 }
