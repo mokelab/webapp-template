@@ -1,3 +1,3 @@
 interface IModels {
-    
+    account: IAccountRepository;
 }

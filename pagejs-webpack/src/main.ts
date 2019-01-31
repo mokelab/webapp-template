@@ -6,7 +6,8 @@ import XHRClient from "./clients/XHRClient";
 import AccessToken from "./models/token/AccessToken";
 
 const token = new AccessToken();
-const models = new Models(token);
+const client = new XHRClient("json");
+const models = new Models(client, token);
 const services = new Services(models);
 const app = new Application(
     new XHRClient("text"),
