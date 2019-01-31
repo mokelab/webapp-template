@@ -2,7 +2,7 @@
 import Ractive from "../ractive";
 import mdl from "../decorators/mdl";
 
-export default class TopPage implements IPage {
+export default class LoginPage implements IPage {
     private app: IApplication;
     private ractive!: Ractive;
 
@@ -10,7 +10,7 @@ export default class TopPage implements IPage {
         this.app = app;
     }
     async onCreate() {
-        const t = await this.app.fetchTemplate("top.html");
+        const t = await this.app.fetchTemplate("login.html");
         this.ractive = new Ractive({
             el: "#container",
             template: t,
