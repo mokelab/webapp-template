@@ -5,7 +5,6 @@ import Services from "./services/Services";
 import XHRClient from "./clients/XHRClient";
 import AccessToken from "./models/token/AccessToken";
 
-import "../node_modules/material-design-lite/material.min.js";
 import "./scss/index.scss";
 
 const token = new AccessToken();
