@@ -1,0 +1,44 @@
+<!-- prettier-ignore-attribute -->
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+  <main class="mdl-layout__content login">
+    <div class="mdc-card">
+      <div class="mdc-card__title mdl-color--primary mdl-color-text--white">
+        <h2 class="mdl-card__title-text">Login</h2>
+      </div>
+      <div as-mdc-text class="mdc-text-field email">
+        <input
+          type="text"
+          class="mdc-text-field__input"
+          id="email-input"
+          name="email"
+          value="{{email}}"
+          required
+        />
+        <label class="mdc-floating-label" for="email-input">Email</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+      <div as-mdc-text class="mdc-text-field password">
+        <input
+          type="password"
+          class="mdc-text-field__input"
+          id="password-input"
+          name="password"
+          value="{{password}}"
+          required
+        />
+        <label class="mdc-floating-label" for="password-input">Password</label>
+        <div class="mdc-line-ripple"></div>
+      </div>
+      <div style="text-align: right; margin-top: 16px;">
+        <button
+          as-mdc-ripple
+          class="mdc-button mdc-button--raised next"
+          on-click="login"
+          disabled="{{!canLogin(email, password) || inProgress}}"
+        >
+          <span class="mdc-button__label">Login</span>
+        </button>
+      </div>
+    </div>
+  </main>
+</div>

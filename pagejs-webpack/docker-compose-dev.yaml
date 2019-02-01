@@ -6,4 +6,4 @@ services:
     ports:
       - 15080:80
     volumes:
-      - $PWD/dist:/opt/web
+      - $PWD/dist:/srv/web
