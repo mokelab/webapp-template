@@ -16,7 +16,12 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
+    "@material/button": "^0.43.0",
+    "@material/card": "^0.43.0",
+    "@material/textfield": "^0.43.1",
+    "@types/material-components-web": "^0.43.0",
     "css-loader": "^2.1.0",
+    "material-components-web": "^0.43.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
