@@ -14,7 +14,7 @@ export default class AccountRepository implements IAccountRepository {
         const url = `change here`;
         const params = {
             identifier: identifier,
-            password: password
+            password: password,
         };
         return this.client.send(Method.POST, url, {}, JSON.stringify(params));
     }
