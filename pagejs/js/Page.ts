@@ -1,3 +1,0 @@
-interface Page {
-    onCreate();
-}
