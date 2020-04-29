@@ -1,6 +1,5 @@
 /// <reference path="./IPage.ts" />
-import { Ractive } from "ractive";
-//import mdc from "../decorators/mdc";
+import Ractive from "ractive";
 
 export default class TopPage implements IPage {
     private app: IApplication;
@@ -16,7 +15,7 @@ export default class TopPage implements IPage {
             template: t,
             decorators: {
                 //                mdc: mdc
-            }
+            },
         });
     }
 }

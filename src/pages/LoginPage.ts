@@ -1,5 +1,5 @@
 /// <reference path="./IPage.ts" />
-import { Ractive } from "../ractive";
+import Ractive from "ractive";
 import { mdcText, mdcRipple } from "../decorators/mdc";
 
 export default class LoginPage implements IPage {
