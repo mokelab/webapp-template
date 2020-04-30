@@ -1,3 +1,6 @@
+const path = require("path");
+const outputPath = path.resolve(__dirname, "dist");
+
 module.exports = {
     mode: "development",
     //mode: 'production',
@@ -8,7 +11,7 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: "ts-loader"
+                use: "ts-loader",
             },
             {
                 test: /\.scss$/,
@@ -17,23 +20,30 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: false,
-                            importLoaders: 2
-                        }
+                            sourceMap: true,
+                            importLoaders: 2,
+                        },
                     },
                     {
                         loader: "sass-loader",
                         options: {
-                            sourceMap: false,
-                            includePaths: ["./node_modules"]
-                        }
-                    }
-                ]
-            }
-        ]
+                            sourceMap: true,
+                            includePaths: ["./node_modules"],
+                        },
+                    },
+                ],
+            },
+        ],
     },
 
     resolve: {
-        extensions: [".ts", ".js"]
-    }
+        extensions: [".ts", ".js"],
+    },
+
+    devServer: {
+        contentBase: outputPath,
+        historyApiFallback: {
+            index: "index.html",
+        },
+    },
 };

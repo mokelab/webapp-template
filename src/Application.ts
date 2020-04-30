@@ -8,15 +8,23 @@ export default class Application implements IApplication {
     private templateClient: HTTPClient;
     private router: IRouter;
     services: IServices;
+    appBar: IAppBar;
+    drawer: IDrawer;
 
     constructor(
         templateClient: HTTPClient,
         services: IServices,
-        routerFactory: (app: IApplication) => IRouter
+        routerFactory: (app: IApplication) => IRouter,
+        drawerFactory: (app: IApplication) => IDrawer,
+        appBarFactory: (drawer: IDrawer) => IAppBar
     ) {
         this.templateClient = templateClient;
         this.services = services;
         this.router = routerFactory(this);
+
+        this.drawer = drawerFactory(this);
+        this.appBar = appBarFactory(this.drawer);
+        this.appBar.setHasDrawer(true);
     }
 
     start() {
