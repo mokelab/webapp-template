@@ -20,14 +20,14 @@ module.exports = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: false,
+                            sourceMap: true,
                             importLoaders: 2,
                         },
                     },
                     {
                         loader: "sass-loader",
                         options: {
-                            sourceMap: false,
+                            sourceMap: true,
                             includePaths: ["./node_modules"],
                         },
                     },
