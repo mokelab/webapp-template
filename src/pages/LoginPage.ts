@@ -1,7 +1,7 @@
 /// <reference path="./IPage.ts" />
 import Ractive from "ractive";
-import { mdcText, mdcRipple } from "../decorators/mdc";
 import TextField from "../views/TextField";
+import Button from "../views/Button";
 
 export default class LoginPage implements IPage {
     private app: IApplication;
@@ -18,10 +18,7 @@ export default class LoginPage implements IPage {
             template: t,
             components: {
                 TextField: TextField,
-            },
-            decorators: {
-                "mdc-text": mdcText,
-                "mdc-ripple": mdcRipple,
+                Button: Button,
             },
             data: {
                 inProgress: false,

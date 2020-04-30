@@ -13,9 +13,6 @@ export default class TopPage implements IPage {
         this.ractive = new Ractive({
             el: "#container",
             template: t,
-            decorators: {
-                //                mdc: mdc
-            },
         });
     }
 }
