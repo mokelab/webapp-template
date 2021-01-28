@@ -1,5 +1,5 @@
 /// <reference path="./IPage.ts" />
-import Ractive from "ractive";
+import { Ractive } from "ractive";
 
 export default class TopPage implements IPage {
     private app: IApplication;
