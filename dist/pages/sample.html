@@ -36,4 +36,16 @@
       <RaisedButton on-click="submitSelect">Send</RaisedButton>
     </div>
   </section>
+
+  <section>
+    <h2>List</h2>
+    <List>
+      {{#listItems:i}}
+      <SingleLineListItem 
+        index="{{i}}" 
+        label="{{.label}}"
+        on-click="['listClicked',.]"></SingleLineListItem>
+      {{/}}
+    </List>
+  </section>
 </div>

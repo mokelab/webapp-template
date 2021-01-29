@@ -16,4 +16,8 @@
 @use "@material/menu/mdc-menu";
 @use "@material/select/styles";
 
+// list
+@use "@material/list";
+
 @include textfield.core-styles;
+@include list.core-styles;
