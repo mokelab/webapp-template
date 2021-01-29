@@ -31,18 +31,25 @@ export const TextField = Ractive.extend(<any>{
 
 export const TextArea = Ractive.extend(<any>{
     template: `
-<div as-mdc-text class="mdc-text-field mdc-text-field--textarea {{class}}">
-  <textarea id="{{id}}" class="mdc-text-field__input" rows="4" cols="40" value="{{value}}"></textarea>
-  <div class="mdc-notched-outline">
-    <div class="mdc-notched-outline__leading"></div>
-    <div class="mdc-notched-outline__notch">
-      <label for="textarea" class="mdc-floating-label">{{label}}</label>
-    </div>
-    <div class="mdc-notched-outline__trailing"></div>
-  </div>
-</div>
-  `,
+<label as-mdc-text class="mdc-text-field mdc-text-field--filled mdc-text-field--textarea {{class}}">
+  <span class="mdc-text-field__ripple"></span>
+  <span class="mdc-text-field__resizer">
+    <textarea
+      class="mdc-text-field__input"
+      rows="{{rows}}"
+      cols="{{cols}}"
+      aria-label="{{label}}"
+      value="{{value}}"
+      {{#if required}}required{{/if}}></textarea>
+  </span>
+  <span class="mdc-floating-label" id="{{id}}">{{label}}</span>
+  <span class="mdc-line-ripple"></span>
+</label>`,
     decorators: {
         "mdc-text": decorator,
+    },
+    data: {
+        rows: 8,
+        cols: 40,
     },
 });
