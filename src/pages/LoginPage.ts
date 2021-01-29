@@ -1,6 +1,6 @@
 /// <reference path="./IPage.ts" />
 import Ractive from "ractive";
-import TextField from "../views/TextField";
+import { TextField } from "../views/TextField";
 import Button from "../views/Button";
 
 export default class LoginPage implements IPage {

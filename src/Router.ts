@@ -5,12 +5,16 @@
 
 import TopPage from "./pages/TopPage";
 import LoginPage from "./pages/LoginPage";
+import WidgetSamplePage from "./pages/WidgetSample";
 
 export default class Router implements IRouter {
     constructor(app: IApplication) {
         page("/", () => {
             //this.showPage(new TopPage(app));
             this.showPage(new LoginPage(app));
+        });
+        page("/sample", () => {
+            this.showPage(new WidgetSamplePage(app));
         });
     }
 

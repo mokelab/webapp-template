@@ -7,4 +7,9 @@ export const DRAWER_MENU_ITEMS = <IDrawerMenuItem[]>[
         icon: "home",
         path: "/",
     },
+    {
+        label: "サンプル",
+        icon: "science",
+        path: "/sample",
+    },
 ];

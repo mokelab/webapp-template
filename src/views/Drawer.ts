@@ -19,7 +19,7 @@ export class Drawer implements IDrawer {
     <a                                        
       class="mdc-list-item {{#if i == selected}}mdc-list-item--activated{{/if}}"
       tabindex="{{i}}"
-      on-click="['show', i]"
+      on-click="['show', .,i]"
       {{#if i == selected}}aria-current="page"{{/if}}>
       <i                            
         class="material-icons mdc-list-item__graphic"
