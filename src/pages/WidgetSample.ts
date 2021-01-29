@@ -3,7 +3,7 @@ import Ractive from "ractive";
 import { TextArea, TextField } from "../views/TextField";
 
 import "../scss/sample.scss";
-import Button from "../views/Button";
+import Button, { FlatButton, RaisedButton } from "../views/Button";
 
 export default class WidgetSamplePage implements IPage {
     private app: IApplication;
@@ -20,7 +20,8 @@ export default class WidgetSamplePage implements IPage {
             components: {
                 TextField: TextField,
                 TextArea: TextArea,
-                Button: Button,
+                FlatButton: FlatButton,
+                RaisedButton: RaisedButton,
             },
             on: {
                 submit: () => {

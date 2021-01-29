@@ -27,4 +27,35 @@ const Button = Ractive.extend(<any>{
     },
 });
 
+const makeWidget = (template: string) =>
+    Ractive.extend(<any>{
+        template: template,
+        decorators: {
+            "mdc-ripple": ripple,
+        },
+        _click: function () {
+            this.fire("click");
+        },
+    });
+
+export const RaisedButton = makeWidget(`
+<button as-mdc-ripple 
+  class="mdc-button mdc-button--raised {{class}}"
+  style="{{style}}"
+  on-click="@this._click()"
+  disabled="{{disabled}}">
+  <span class="mdc-button__label">{{yield}}</span>
+</button>`);
+
+export const FlatButton = makeWidget(
+    `
+<button as-mdc-ripple 
+  class="mdc-button {{class}}"
+  style="{{style}}"
+  on-click="@this._click()"
+  disabled="{{disabled}}">
+  <span class="mdc-button__label">{{yield}}</span>
+</button>`
+);
+
 export default Button;
