@@ -9,7 +9,7 @@ export const DRAWER_MENU_ITEMS = <IDrawerMenuItem[]>[
     },
     {
         label: "サンプル",
-        icon: "setting",
+        icon: "science",
         path: "/sample",
     },
 ];
