@@ -1,3 +1,9 @@
+@use "@material/theme" with (
+  $primary: #9c27b0,
+  $secondary: #76ff03,
+  $background: #fff,
+);
+
 @use "@material/button/mdc-button";
 @use "@material/card/mdc-card";
 @use "@material/top-app-bar/mdc-top-app-bar";
